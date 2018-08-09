@@ -6,7 +6,7 @@ import time
 
 rounds = 0
 phoneNumber = os.environ["PHONE_NUMBER"]
-#print("using " + str(phoneNumber) + " as phone number")
+print("using " + str(phoneNumber) + " as phone number")
 print('test pk')
 questions = {
     'Was verlangte Nena am Energy Air 2016?' : 'Eine komplett weisse Garderobe',
