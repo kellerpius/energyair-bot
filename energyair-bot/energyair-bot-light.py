@@ -60,9 +60,9 @@ def get_answer(question):
     return answer
 
 def next_question(antwort):
-	antwort = tree.xpath('//form[@id="'+antwort+'"]/h3/value()')[0]
-	print('DenoTest:')
-	print(antwort)
+    antwort = tree.xpath('//form[@id="'+antwort+'"]/h3/value()')[0]
+    print('DenoTest:')
+    print(antwort)
     data = {'question': antwort}
     q2 = session.post('https://game.energy.ch/', data)
     tree = html.fromstring(q2.content)
