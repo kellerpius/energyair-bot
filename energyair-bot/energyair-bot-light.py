@@ -78,7 +78,7 @@ try:
             data = {'mobile': phoneNumber}
             q1 = session.post('https://game.energy.ch/', data)
             tree = html.fromstring(q1.content)
-            print(tree)
+            print(tree.xpath())
 
             frage = tree.xpath('//form[@class="questions"]/h3/text()')[0]
             print("answering questions...")
