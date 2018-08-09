@@ -72,11 +72,13 @@ def next_question(antwort):
 try:
     while True:
         try:
+            print('startsssssssss')
             rounds += 1
             session = requests.session()
             data = {'mobile': phoneNumber}
             q1 = session.post('https://game.energy.ch/', data)
             tree = html.fromstring(q1.content)
+            print('endsssssssssssssssss')
 
             frage = tree.xpath('//form[@class="questions"]/h3/text()')[0]
             print("answering questions...")
