@@ -7,7 +7,7 @@ import time
 rounds = 0
 phoneNumber = os.environ["PHONE_NUMBER"]
 print("using " + str(phoneNumber) + " as phone number")
-print('test pk')
+print("helloworld")
 questions = {
     'Was verlangte Nena am Energy Air 2016?' : 'Eine komplett weisse Garderobe',
     'Welcher Act stand beim ersten Energy Air 2014 und auch im letzten Jahr auf der Bühne?' : 'Pegasus',
@@ -75,9 +75,7 @@ try:
             rounds += 1
             session = requests.session()
             data = {'mobile': phoneNumber}
-            print('test pk')
             q1 = session.post('https://game.energy.ch/', data)
-            print('test pk')
             tree = html.fromstring(q1.content)
 
             frage = tree.xpath('//form[@class="questions"]/h3/text()')[0]
